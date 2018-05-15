@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: app_dockerfile
+    volumes:
+      - ./..:/home/ruby
+    tty: true

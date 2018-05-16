@@ -11,6 +11,7 @@ OSXにて、[Docker For Mac](https://www.docker.com/docker-mac)のインスト�
 ### 各バージョン
 - Ruby 2.5
 - Rails 5.1.6
+- mysql 5.7
 
 ## 環境構築
 ### 初回のみ

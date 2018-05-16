@@ -1,10 +1,32 @@
 version: "2"
 
 services:
+  web:
+    build:
+      context: .
+      dockerfile: web_dockerfile
+    volumes:
+      - ./..:/var/www/app
+    ports:
+        - "8000:80"
+    links:
+        - app
+
   app:
     build:
       context: .
       dockerfile: app_dockerfile
     volumes:
-      - ./..:/home/ruby
-    tty: true
+      - ./..:/var/www/app
+    links:
+      - db
+
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./volumes:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=GdS)FP6*B7zJ
+      - MYSQL_ROOT_PASSWORD=yQqDx.4(Cnue

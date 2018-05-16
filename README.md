@@ -17,7 +17,7 @@ OSXにて、[Docker For Mac](https://www.docker.com/docker-mac)のインスト�
 ### 初回のみ
 ```
 $ git clone git@github.com:prgyukke/Docker_for_Ruby_on_Rails.git
-$ cd Docker_for_Ruby/
+$ cd Docker_for_Ruby_on_Rails/
 $ rm -rf .git
 $ docker-compose up -d
 ```
@@ -31,7 +31,7 @@ $ docker exec -it docker_for_ruby_on_rails_app_1 /bin/bash
 
 ### 2回目以降
 ```
-$ cd Docker_for_Ruby/
+$ cd Docker_for_Ruby_on_Rails/
 $ docker-compose up -d
 ```
 

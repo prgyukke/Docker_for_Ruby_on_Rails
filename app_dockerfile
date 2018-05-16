@@ -3,3 +3,7 @@ FROM ruby:2.5
 RUN apt-get update
 
 WORKDIR /var/www/app
+
+ADD Gemfile /var/www/app/Gemfile
+
+RUN bundle install

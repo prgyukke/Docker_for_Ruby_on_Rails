@@ -16,7 +16,7 @@ OSXにて、[Docker For Mac](https://www.docker.com/docker-mac)のインスト�
 ## 環境構築
 ### 初回のみ
 ```
-$ git clone git@github.com:prgyukke/Docker_for_Ruby.git
+$ git clone git@github.com:prgyukke/Docker_for_Ruby_on_Rails.git
 $ cd Docker_for_Ruby/
 $ rm -rf .git
 $ docker-compose up -d

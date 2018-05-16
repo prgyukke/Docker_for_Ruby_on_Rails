@@ -14,26 +14,32 @@ OSXにて、[Docker For Mac](https://www.docker.com/docker-mac)のインスト�
 $ git clone git@github.com:prgyukke/Docker_for_Ruby.git
 $ cd Docker_for_Ruby/
 $ rm -rf .git
-$ cd docker/
 $ docker-compose up -d
 ```
 
 ### 2回目以降
 ```
-$ cd Docker_for_Ruby/docker/
+$ cd Docker_for_Ruby/
 $ docker-compose up -d
 ```
 
 ### コンテナに入る際
 ```
 # mac上の`Docker_for_Ruby/docker/`にて
-$ docker exec -it docker_app_1 /bin/bash
+$ docker exec -it docker_for_ruby_on_rails_app_1 /bin/bash
+```
+
+### ビルトインサーバの立ち上げ
+`http://localhost:3000/`で確認可能
+```
+# コンテナ上にて
+# rails s -p 3000 -b '0.0.0.0'
 ```
 
 ### コンテナを抜ける際
 ```
 # コンテナ上にて
-# docker exec -it docker_app_1 /bin/bash
+# exit
 ```
 
 ### 開発終了時

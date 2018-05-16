@@ -1,12 +1,13 @@
-# Docker_for_Ruby_on_Rails
+# [Docker_for_Ruby_on_Rails](https://github.com/prgyukke/Docker_for_Ruby_on_Rails)
 ## はじめに
 Ruby on Rails開発環境用のDockerです。  
-プロジェクトディレクトリをDocker内の`/work/app`にマウントしています。  
+プロジェクトディレクトリを`app`コンテナ内の`/var/www/app`にマウントしています。  
 OSXにて、[Docker For Mac](https://www.docker.com/docker-mac)のインストール前提です。  
 [Docker Community Edition for Mac - Docker Store](https://store.docker.com/editions/community/docker-ce-desktop-mac)の[Get Docker]をクリックしてダウンロード後、インストールしてください。  
 
 ### 各バージョン
 - Ruby 2.5
+- Rails 5.1.6
 
 ## 環境構築
 ### 初回のみ

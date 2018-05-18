@@ -19,7 +19,7 @@ development:
   username: app
   database: app
   password: GdS)FP6*B7zJ
-  host: 172.18.0.2
+  host: db
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

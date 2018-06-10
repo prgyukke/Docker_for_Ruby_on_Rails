@@ -10,20 +10,20 @@ services:
       - ./:/var/www/app
     ports:
         - "3000:3000"
-    links:
-      - db
+    # links:
+    #   - db
     tty: true
 
-  db:
-    image: mysql:5.7
-    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
-    volumes:
-      - ./mysql:/var/lib/mysql
-      - ./my.cnf:/etc/mysql/conf.d/my.cnf
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_DATABASE=app
-      - MYSQL_USER=app
-      - MYSQL_PASSWORD=GdS)FP6*B7zJ
-      - MYSQL_ROOT_PASSWORD=yQqDx.4(Cnue
+  # db:
+  #   image: mysql:5.7
+  #   command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+  #   volumes:
+  #     - ./mysql:/var/lib/mysql
+  #     - ./my.cnf:/etc/mysql/conf.d/my.cnf
+  #   ports:
+  #     - "3306:3306"
+  #   environment:
+  #     - MYSQL_DATABASE=app
+  #     - MYSQL_USER=app
+  #     - MYSQL_PASSWORD=GdS)FP6*B7zJ
+  #     - MYSQL_ROOT_PASSWORD=yQqDx.4(Cnue

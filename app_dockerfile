@@ -1,6 +1,6 @@
 FROM ruby:2.5
 
-RUN apt-get update
+RUN apt-get update && apt-get install -y nodejs
 
 WORKDIR /var/www/app
 

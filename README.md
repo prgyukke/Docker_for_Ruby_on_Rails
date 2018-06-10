@@ -10,8 +10,8 @@ OSXにて、[Docker For Mac](https://www.docker.com/docker-mac)のインスト�
 
 ### 各バージョン
 - Ruby 2.5
-- Rails 5.1.6
-- mysql 5.7
+- Rails 5.1.4
+- postgres 10
 
 ## 環境構築
 ### 初回のみ
@@ -19,7 +19,9 @@ OSXにて、[Docker For Mac](https://www.docker.com/docker-mac)のインスト�
 $ git clone git@github.com:prgyukke/Docker_for_Ruby_on_Rails.git
 $ cd Docker_for_Ruby_on_Rails/
 $ rm -rf .git
-$ docker-compose up -d
+$ git init
+$ git update-index --skip-worktree Gemfile.lock
+$ docker-compose up -d --build
 ```
 
 appコンテナに入る

@@ -15,15 +15,13 @@ services:
     tty: true
 
   db:
-    image: mysql:5.7
-    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    image: postgres:10
     volumes:
-      - ./mysql:/var/lib/mysql
-      - ./my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./postgresql:/var/lib/postgresql
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_DATABASE=app
-      - MYSQL_USER=app
-      - MYSQL_PASSWORD=GdS)FP6*B7zJ
-      - MYSQL_ROOT_PASSWORD=yQqDx.4(Cnue
+      - POSTGRES_DB=app
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=GdS)FP6*B7zJ
+      - POSTGRES_PASSWORD=yQqDx.4(Cnue

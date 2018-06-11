@@ -1,5 +1,7 @@
 FROM ruby:2.5
 
+ENV RUBYOPT -EUTF-8
+
 RUN apt-get update && apt-get install -y nodejs
 
 WORKDIR /var/www/app

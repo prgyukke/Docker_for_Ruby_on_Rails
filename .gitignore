@@ -187,4 +187,4 @@ $RECYCLE.BIN/
 # End of https://www.gitignore.io/api/ruby,macos,rails,windows,rubymine
 
 # docker
-mysql/
+postgresql/

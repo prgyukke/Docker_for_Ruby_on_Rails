@@ -5,22 +5,8 @@ services:
     build:
       context: .
       dockerfile: app_dockerfile
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - ./:/var/www/app
     ports:
         - "3000:3000"
-    links:
-      - db
     tty: true
-
-  db:
-    image: postgres:10
-    volumes:
-      - ./postgresql/data:/var/lib/postgresql/data
-    ports:
-      - "3306:3306"
-    environment:
-      - POSTGRES_DB=app
-      - POSTGRES_USER=app
-      - POSTGRES_PASSWORD=GdS)FP6*B7zJ

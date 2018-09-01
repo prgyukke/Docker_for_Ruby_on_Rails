@@ -22,6 +22,7 @@ $ docker-compose up -d --build
 appコンテナに入る
 ```
 $ docker exec -it docker_for_ruby_on_rails_app_1 /bin/bash
+# bundle install
 # (必要であれば)migrate
 # rails db:migrate
 ```
@@ -47,4 +48,22 @@ $ docker exec -it docker_for_ruby_on_rails_app_1 /bin/bash
 ```
 $ docker-compose down
 $ docker rmi docker_for_ruby_on_rails_app
+```
+
+## rails sについて
+`rails s`でビルトイサーバを立ち上げる場合、下記の方法で行ってください。
+また、ブラウザ上では`localhost:3000`にアクエスしてください。
+```
+# appコンテナ上にて
+# rails s -b '0.0.0.0'
+```
+
+## 自動テストについて
+このレポジトリではRSpecを採用しています。  
+binstubをインストールしています。
+自動テストの際には下記の方法で実行してください。
+
+```
+# appコンテナ上にて
+# bin/rspec
 ```

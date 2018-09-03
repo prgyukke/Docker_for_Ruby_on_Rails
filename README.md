@@ -47,7 +47,6 @@ $ docker exec -it docker_for_ruby_on_rails_app_1 /bin/bash
 ### 開発終了時
 ```
 $ docker-compose down
-$ docker rmi docker_for_ruby_on_rails_app
 ```
 
 ## rails sについて

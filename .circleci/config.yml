@@ -4,8 +4,6 @@ jobs:
     machine: true
     steps:
     - checkout
-    - restore_cache:
-        key: imejin-open-{{ .Branch }}
     - run:
         name: Build
         command: |
@@ -16,8 +14,3 @@ jobs:
         name: Run RSpec
         command: |
           docker-compose run app bundle exec rspec
-    - save_cache:
-        key: imejin-open-{{ .Branch }}
-        paths:
-        - node_modules
-        - .gem
